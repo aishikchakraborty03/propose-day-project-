@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Please Reconsider</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #ff6b6b, #ffc3a0);
+        font-family: 'Arial', sans-serif;
+      }
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        width: 90%;
+        animation: fadeIn 1s ease-in;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      h1 {
+        color: #ff4757;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        animation: heartbeat 1.5s infinite;
+      }
+      @keyframes heartbeat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+      p {
+        color: #2f3542;
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+        line-height: 1.6;
+      }
+      .btn {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+      .btn a {
+        text-decoration: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+      }
+      #yesButton2 {
+        background: #ff4757;
+        color: white;
+        border: 2px solid #ff4757;
+      }
+      #yesButton2:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+      }
+      #noButton2 {
+        background: white;
+        color: #ff4757;
+        border: 2px solid #ff4757;
+      }
+      #noButton2:hover {
+        background: #ff4757;
+        color: white;
+      }
+      .gif-container {
+        margin: 20px 0;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gif-container">
+        <div
+          class="tenor-gif-embed"
+          data-postid="15195810"
+          data-share-method="host"
+          data-aspect-ratio="1"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/view/couple-forgive-me-asking-for-forgiveness-begging-crying-gif-15195810">Couple Forgive Me Sticker</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      </div>
+
+      <h1>💝 Please Think Again! 💝</h1>
+      <p>Every love story deserves a chance... 🥺<br>
+         Your "Yes" would mean the world to me! 💕<br>
+         Let's create something beautiful together! ✨</p>
+
+      <div class="btn">
+        <a id="yesButton2" href="yes.html">Yes, I Will! 💖</a>
+        <a id="noButton2" href="no3.html">Still Thinking... 🤔</a>
+      </div>
+    </div>
+  </body>
+</html>

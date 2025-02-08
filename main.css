@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6b6b, #ffd1d1);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.love-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.love-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 107, 107, 0.1), rgba(255, 209, 209, 0.1));
+    z-index: 0;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #ff4757;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heart-divider {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.heart-divider i {
+    color: #ff4757;
+    font-size: 24px;
+    margin: 0 10px;
+    animation: pulse 1.5s infinite;
+}
+
+.heart-divider i:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.heart-divider i:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.gif-container {
+    max-width: 300px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.2);
+}
+
+.love-question {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #ff4757;
+    text-align: center;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.love-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.love-button span {
+    margin-right: 10px;
+}
+
+.love-button i {
+    font-size: 18px;
+    animation: pulse 1.5s infinite;
+}
+
+.yes-btn {
+    background: linear-gradient(45deg, #ff4757, #ff6b6b);
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+.no-btn {
+    background: white;
+    color: #ff4757;
+    border: 2px solid #ff4757;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.1);
+}
+
+.love-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.3);
+}
+
+.love-button:active {
+    transform: translateY(-1px);
+}
+
+.hearts-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: #ff4757;
+    animation: float-up 4s linear forwards;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(50vh) scale(1);
+    }
+    100% {
+        transform: translateY(-20vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Message list styling for yes.html */
+.message-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+}
+
+.message-list li {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #ff4757;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(255, 71, 87, 0.1);
+    transition: all 0.3s ease;
+}
+
+.message-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.2);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.control-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(255, 71, 87, 0.2);
+}
+
+.control-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+    background: #ff6b6b;
+}
+
+.control-btn:active {
+    transform: translateY(0);
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 30px;
+}
+
+.animate-input {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 20px;
+    border: 2px solid #ff4757;
+    border-radius: 50px;
+    background-color: white;
+    color: #ff4757;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.1);
+}
+
+.animate-input:focus {
+    outline: none;
+    border-color: #ff4757;
+    box-shadow: 0 5px 20px rgba(255, 71, 87, 0.2);
+    transform: translateY(-2px);
+}
+
+.animate-input::placeholder {
+    color: #ffb3b3;
+    opacity: 0.8;
+}
+
+.input-icons {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.heart-icon {
+    color: #ff4757;
+    font-size: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+.animate-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(45deg, #ff4757, #ff6b6b);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.3);
+}
+
+.animate-button:active {
+    transform: translateY(-1px);
+}
+
+.button-hearts {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button-hearts i {
+    color: white;
+    font-size: 18px;
+    animation: pulse 1.5s infinite;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #ff4757;
+    font-weight: 700;
+}
