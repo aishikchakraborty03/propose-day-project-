@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Last Chance ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+      }
+
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2.5rem;
+        border-radius: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        max-width: 600px;
+        width: 90%;
+        animation: floatIn 1.5s ease-out;
+      }
+
+      @keyframes floatIn {
+        0% {
+          opacity: 0;
+          transform: translateY(50px) scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .gif-container {
+        margin: 20px auto;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transform-style: preserve-3d;
+        perspective: 1000px;
+      }
+
+      .gif-container:hover {
+        animation: wobble 2s ease-in-out infinite;
+      }
+
+      @keyframes wobble {
+        0%, 100% { transform: translateZ(0) rotateY(0); }
+        25% { transform: translateZ(10px) rotateY(5deg); }
+        75% { transform: translateZ(10px) rotateY(-5deg); }
+      }
+
+      h1 {
+        font-family: 'Dancing Script', cursive;
+        color: #ff4b6e;
+        font-size: 2.8rem;
+        margin: 1.5rem 0;
+        animation: glow 2s ease-in-out infinite;
+      }
+
+      @keyframes glow {
+        0%, 100% { text-shadow: 0 0 5px rgba(255, 75, 110, 0.3); }
+        50% { text-shadow: 0 0 20px rgba(255, 75, 110, 0.6); }
+      }
+
+      p {
+        color: #4a4a4a;
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+        line-height: 1.6;
+        animation: fadeInUp 1s ease-out 0.5s both;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .btn {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .btn a {
+        text-decoration: none;
+        padding: 12px 35px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+      }
+
+      #yesButton {
+        background: linear-gradient(45deg, #ff4b6e, #ff8fb3);
+        color: white;
+        border: none;
+        box-shadow: 0 5px 15px rgba(255, 75, 110, 0.4);
+      }
+
+      #yesButton:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(255, 75, 110, 0.6);
+      }
+
+      #noButton {
+        background: white;
+        color: #ff4b6e;
+        border: 2px solid #ff4b6e;
+      }
+
+      #noButton:hover {
+        background: #ff4b6e;
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      .floating-hearts {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      @keyframes floatHeart {
+        0% {
+          transform: translateY(100vh) scale(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) scale(1);
+          opacity: 0;
+        }
+      }
+
+      .heart {
+        position: absolute;
+        font-size: 20px;
+        animation: floatHeart 15s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-hearts" id="heartContainer"></div>
+    <div class="container">
+      <div class="gif-container">
+        <div
+          class="tenor-gif-embed"
+          data-postid="15974530976611222074"
+          data-share-method="host"
+          data-aspect-ratio="1.26923"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/view/peach-goma-phone-gif-15974530976611222074">Peach Goma Phone Sticker</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      </div>
+
+      <h1>Please Say Yes! 💝</h1>
+      <p>Every moment without your "yes" feels like an eternity... 🥺<br>
+         Let's make our story beautiful together! ✨</p>
+      
+      <div class="btn">
+        <a id="yesButton" href="yes.html">Yes, I'm Ready! 💖</a>
+        <a id="noButton" href="#">Still No... 🤔</a>
+      </div>
+    </div>
+
+    <script>
+      // Create floating hearts background
+      const heartContainer = document.getElementById('heartContainer');
+      const hearts = ['❤️', '💖', '💝', '💕', '💗'];
+      
+      function createHeart() {
+        const heart = document.createElement('span');
+        heart.className = 'heart';
+        heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 10 + 5) + 's';
+        heartContainer.appendChild(heart);
+        
+        // Remove heart after animation
+        setTimeout(() => {
+          heart.remove();
+        }, 15000);
+      }
+
+      // Create hearts periodically
+      setInterval(createHeart, 1000);
+
+      // Make the "No" button move away from cursor
+      const noButton = document.getElementById('noButton');
+      
+      noButton.addEventListener('mouseover', (e) => {
+        const x = e.pageX - noButton.offsetLeft;
+        const y = e.pageY - noButton.offsetTop;
+        
+        const moveX = (x < noButton.offsetWidth/2) ? 100 : -100;
+        const moveY = (y < noButton.offsetHeight/2) ? 100 : -100;
+        
+        noButton.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        
+        setTimeout(() => {
+          noButton.style.transform = 'translate(0, 0)';
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
